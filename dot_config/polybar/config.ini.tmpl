@@ -151,7 +151,7 @@ label = %percentage_used:2%%
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "CPU "
+#format-prefix = "CPU "
 format-prefix = " "
 format-prefix-foreground = ${colors.primary}
 label = %percentage:2%%
@@ -198,24 +198,24 @@ expand-right = true
 ; Commands will be executed using "/bin/sh -c $COMMAND"
 
 label-open = 
-label-close =  C
+label-close = 
 
 ; Optional item separator
 ; Default: none
 label-separator = |
 
-menu-0-0 =  L
+menu-0-0 = 
 menu-0-0-exec = i3lock -c 111111
-menu-0-1 =  O
-menu-0-1-exec = pwd
-menu-0-2 =  S
-menu-0-2-exec = pwd
-menu-0-3 =  H
-menu-0-3-exec = pwd
-menu-0-4 =  R
-menu-0-4-exec = pwd
-menu-0-5 =  P
-menu-0-5-exec = pwd
+menu-0-1 = 
+menu-0-1-exec = i3-msg exit
+menu-0-2 = 
+menu-0-2-exec = systemctl suspend
+menu-0-3 = 
+menu-0-3-exec = systemctl hibernate
+menu-0-4 = 
+menu-0-4-exec = systemctl reboot
+menu-0-5 = 
+menu-0-5-exec = systemctl poweroff
 
 [module/i3]
 type = internal/i3
