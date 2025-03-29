@@ -1,5 +1,13 @@
 README.md
 
+{{- if eq .chezmoi.os "linux" -}}
+applications.json
+komorebi.bar.json
+komorebi.json
+.config/whkdrc
+.config/yasb/**
+{{- end -}}
+
 {{- if eq .chezmoi.os "windows" -}}
 .config/i3/**
 .config/i3status/**
